@@ -185,6 +185,23 @@ if (bgMusic) {
     updateMusicButton();
   }
 
+  const tryPlayOnGesture = () => {
+    if (bgMusic.paused && localStorage.getItem(MUSIC_KEY) !== "false") {
+      bgMusic
+        .play()
+        .then(() => {
+          musicBlocked = false;
+          updateMusicButton();
+        })
+        .catch(() => {
+          musicBlocked = true;
+          updateMusicButton();
+        });
+    }
+  };
+
+  window.addEventListener("pointerdown", tryPlayOnGesture, { once: true });
+
   bgMusic.addEventListener("play", () => {
     localStorage.setItem(MUSIC_PLAYING_KEY, "true");
     if (!musicTimeInterval) {
