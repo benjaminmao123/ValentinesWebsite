@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Best Moments</title>
+    <base target="contentFrame" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="language-switch">
+        <label for="languageSelect" data-i18n="languageLabel">Language</label>
+        <select id="languageSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+
+      <div class="heart" aria-hidden="true">❤</div>
+      <h1 class="memories-title" data-i18n="memoriesTitle">
+        <span class="option-icon" aria-hidden="true">📷</span>
+        Our Best Moments
+      </h1>
+      <p class="subtitle" data-i18n="memoriesSubtitle">
+        A few snapshots of us.
+      </p>
+
+      <div class="memories-grid" aria-label="Photo memories">
+        <div class="memory-tile memory-photo">
+          <img src="images/memory-1.jpg" alt="Memory 1" />
+        </div>
+        <div class="memory-tile memory-photo">
+          <img src="images/memory-2.jpg" alt="Memory 2" />
+        </div>
+        <div class="memory-tile memory-photo">
+          <img src="images/memory-3.jpg" alt="Memory 3" />
+        </div>
+        <div class="memory-tile memory-photo">
+          <img src="images/memory-4.jpg" alt="Memory 4" />
+        </div>
+        <div class="memory-tile memory-photo">
+          <img src="images/memory-5.jpg" alt="Memory 5" />
+        </div>
+        <div class="memory-tile memory-photo">
+          <img src="images/memory-6.jpg" alt="Memory 6" />
+        </div>
+      </div>
+
+      <a class="back-link" href="options.html" data-i18n="backToOptions">
+        Back to options
+      </a>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Why I Love You</title>
+    <base target="contentFrame" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="language-switch">
+        <label for="languageSelect" data-i18n="languageLabel">Language</label>
+        <select id="languageSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+
+      <div class="heart" aria-hidden="true">❤</div>
+      <h1 class="memories-title" data-i18n="loveTitle">
+        <span class="option-icon" aria-hidden="true">💖</span>
+        Why I Love You
+      </h1>
+      <p class="subtitle" data-i18n="loveSubtitle">
+        A few reasons you mean the world to me.
+      </p>
+
+      <div class="love-list">
+        <details class="memory-tile love-card">
+          <summary>Your Smile</summary>
+          <p>
+            Your smile is honestly my favorite thing in the world. It’s the kind
+            of smile that instantly makes everything feel okay. I don’t think you
+            realize how dangerous it is 😌
+          </p>
+        </details>
+        <details class="memory-tile love-card">
+          <summary>Your Kindness</summary>
+          <p>
+            Even when I accidentally (or… not so accidentally) annoy you…
+            you always talk things through with me.
+            
+            That kindness, that patience, it's one of the things that makes you so incredibly special.
+          </p>
+        </details>
+        <details class="memory-tile love-card">
+          <summary>Your Food Opinions (Even When Wrong)</summary>
+          <p>Even when your food choices are questionable… I still adore you.</p>
+        </details>
+      </div>
+
+      <a class="back-link" href="options.html" data-i18n="backToOptions">
+        Back to options
+      </a>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

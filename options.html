@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Choose a Date</title>
+    <base target="contentFrame" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,21 +18,32 @@
       </div>
 
       <div class="heart" aria-hidden="true">❤</div>
-      <h1 data-i18n="optionsTitle">Pick a cute date idea</h1>
+      <h1 data-i18n="optionsTitle">Things I like about you</h1>
       <p class="subtitle" data-i18n="optionsSubtitle">
-        Placeholders for now — we can fill these in later.
+        Little moments and words from my heart.
       </p>
 
       <div class="options">
-        <button class="btn btn-yes" type="button" data-i18n="option1">
-          Option 1
-        </button>
-        <button class="btn btn-yes" type="button" data-i18n="option2">
-          Option 2
-        </button>
-        <button class="btn btn-yes" type="button" data-i18n="option3">
-          Option 3
-        </button>
+        <a
+          class="btn btn-yes option-btn"
+          href="memories.html"
+          data-i18n="option1"
+        >
+          <span class="option-icon" aria-hidden="true">🖼️</span>
+          Our Memories
+        </a>
+        <a class="btn btn-yes option-btn" href="letter.html" data-i18n="option2">
+          <span class="option-icon" aria-hidden="true">📧</span>
+          My Letter
+        </a>
+        <a class="btn btn-yes option-btn" href="love.html" data-i18n="option3">
+          <span class="option-icon" aria-hidden="true">💖</span>
+          Why I Love You
+        </a>
+        <a class="btn btn-yes option-btn" href="game.html" data-i18n="option4">
+          <span class="option-icon" aria-hidden="true">🎮</span>
+          Catch My Love
+        </a>
       </div>
 
       <a class="back-link" href="index.html" data-i18n="backToQuestion">

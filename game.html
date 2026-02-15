@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catch My Love</title>
+    <base target="contentFrame" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <div class="language-switch">
+        <label for="languageSelect" data-i18n="languageLabel">Language</label>
+        <select id="languageSelect" aria-label="Language">
+          <option value="en">English</option>
+          <option value="ja">日本語</option>
+        </select>
+      </div>
+
+      <div class="heart" aria-hidden="true">❤</div>
+      <h1 class="memories-title" data-i18n="gameTitle">Catch My Love</h1>
+      <p class="subtitle" data-i18n="gameSubtitle">
+        Catch the hearts and kisses. Avoid the angry faces.
+      </p>
+
+      <div class="scoreboard">
+        <div class="score-item">
+          <span data-i18n="scoreLabel">Score</span>:
+          <span id="gameScore">0</span>
+        </div>
+        <div class="score-item">
+          <span data-i18n="livesLabel">Lives</span>:
+          <span id="gameLives">3</span>
+        </div>
+      </div>
+
+      <div class="game-area" id="gameArea" aria-label="Catch My Love game">
+        <div class="catcher" id="catcher">💗</div>
+      </div>
+
+      <div class="game-controls">
+        <button class="btn btn-yes" id="startGameBtn" type="button" data-i18n="startGame">
+          Start Game
+        </button>
+        <button class="btn btn-no" id="pauseGameBtn" type="button" data-i18n="pauseGame">
+          Pause
+        </button>
+        <label class="sound-toggle">
+          <input id="soundToggle" type="checkbox" checked />
+          <span data-i18n="soundLabel">Sound</span>
+        </label>
+      </div>
+
+      <div class="game-over is-hidden" id="gameOver">
+        <div class="game-over-card">
+          <h2 data-i18n="gameOverTitle">Game Over</h2>
+          <p class="game-over-message" data-i18n="gameOverMessage">
+            You caught my heart 💕 (Like you always do)
+          </p>
+          <p>
+            <span data-i18n="finalScore">Final score</span>:
+            <span id="finalScore">0</span>
+          </p>
+          <button class="btn btn-yes" id="restartGameBtn" type="button" data-i18n="playAgain">
+            Play Again
+          </button>
+        </div>
+      </div>
+
+      <a class="back-link" href="options.html" data-i18n="backToOptions">
+        Back to options
+      </a>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
