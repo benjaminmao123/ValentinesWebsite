@@ -91,7 +91,20 @@ const languageSelect = document.getElementById("languageSelect");
 const yesBtn = document.getElementById("yesBtn");
 const noBtn = document.getElementById("noBtn");
 const musicToggle = document.getElementById("musicToggle");
-const bgMusic = document.getElementById("bgMusic");
+const getMusicElement = () => {
+  const local = document.getElementById("bgMusic");
+  if (local) {
+    return local;
+  }
+  try {
+    if (window.parent && window.parent !== window) {
+      return window.parent.document.getElementById("bgMusic");
+    }
+  } catch (error) {
+    return null;
+  }
+  return null;
+};
 
 const applyLanguage = (lang) => {
   const strings = translations[lang] || translations.en;
@@ -113,6 +126,7 @@ let musicBlocked = false;
 let musicTimeInterval = null;
 
 const updateMusicButton = () => {
+  const bgMusic = getMusicElement();
   if (!musicToggle || !bgMusic) {
     return;
   }
@@ -136,6 +150,7 @@ if (languageSelect) {
 }
 applyLanguage(savedLanguage);
 
+const bgMusic = getMusicElement();
 if (bgMusic) {
   bgMusic.volume = 0.5;
   const shouldPlay = localStorage.getItem(MUSIC_KEY) !== "false";
